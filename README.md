@@ -4,15 +4,13 @@
 
 ## 下载与预览
 
-本仓库使用 Git LFS 保存视频，请安装 Git LFS 后克隆：
+视频已转换为网页播放版本（H.264 / AAC），直接存储在仓库中，无需 Git LFS。原始高画质视频保留在作者本地。
 
 ```sh
-git lfs install
 git clone https://github.com/tangcuxiaobaoyu/baoyu.git
 cd baoyu
-git lfs pull
 ```
 
-保留 `index.html` 与 `视频` 文件夹的相对位置。普通 ZIP 下载可能仅包含视频的 LFS 指针。
+保留 `index.html` 与 `视频` 文件夹的相对位置。
 
-上传仓库不等于发布网站；部署时需使用实际视频文件，不能使用 LFS 指针代替视频。
+Vercel 使用静态站点方式部署，视频为实际 MP4 文件，已启用 faststart 以便边下载边播放。
